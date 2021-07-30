@@ -1,10 +1,10 @@
+# FROM enus0803/nodejs-windows-chrome-gm
 FROM node
 
-WORKDIR /myapp
+WORKDIR /myangularapp
 
 COPY . .
-
-RUN npm install
+RUN npm install -g http-server
 
 EXPOSE 9999
-CMD ["node", "server.js"]
+CMD ["http-server", "--port", "9999"]
