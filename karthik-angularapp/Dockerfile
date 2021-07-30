@@ -4,7 +4,7 @@ FROM node
 WORKDIR /myangularapp
 
 COPY . .
-RUN npm install -g lite-server
+RUN npm install -g http-server
 
-EXPOSE 9999
-CMD ["lite-server", "--host", "0.0.0.0", "--port", "9999"]
+EXPOSE 4200
+CMD ["http-server", "--port", "4200"]
