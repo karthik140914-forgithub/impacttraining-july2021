@@ -7,4 +7,4 @@ COPY . .
 RUN npm install -g lite-server
 
 EXPOSE 4200
-CMD ["lite-server", "--port", "4200"]
+CMD ["lite-server", "--host", "0.0.0.0", "--port", "4200"]
